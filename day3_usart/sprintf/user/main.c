@@ -12,6 +12,7 @@ int main(void)
 	bsp_init();
 	led_init();
 	delay_init();
+	uart1_init();
 	
 	while(1)
 	{
