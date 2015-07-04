@@ -43,14 +43,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\</OutputDirectory>
+          <OutputDirectory>.\output\</OutputDirectory>
           <OutputName>balancer</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>1</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\</ListingPath>
+          <ListingPath>.\listing\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -211,7 +211,7 @@
             <hadIRAM2>0</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>8</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>0</EndSel>
             <uLtcg>0</uLtcg>
             <RoSelD>3</RoSelD>
@@ -406,6 +406,16 @@
               <FileType>1</FileType>
               <FilePath>..\bsp\delay.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\bsp.c</FilePath>
+            </File>
+            <File>
+              <FileName>uart1.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\uart1.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -415,6 +425,11 @@
               <FileName>led.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\dirver\led.c</FilePath>
+            </File>
+            <File>
+              <FileName>consola.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\dirver\consola.c</FilePath>
             </File>
           </Files>
         </Group>

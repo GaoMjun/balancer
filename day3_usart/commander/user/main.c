@@ -1,22 +1,54 @@
 #include "stm32f10x.h"
 
+#include <stdio.h>
+#include <string.h>
+
 #include "bsp.h"
 #include "led.h"
 #include "delay.h"
+#include "uart1.h"
 
+#include "consola.h"
+
+char Uart1_Buffer[0xFF] = "0";
+char command1[0xFF] = "led on";
+char command2[0xFF] = "led off";
+uint16_t Uart1_BufferSize = 0;
+uint8_t i = 0;
+uint8_t commandEnd = 0;
+
+char test[0xFF];
 int main(void)
 {
 	SystemInit();
 	bsp_init();
 	led_init();
 	delay_init();
+	uart1_init();
+	
+	NVIC_Configuration();
 	
 	while(1)
 	{
-		led_on();
-		DelayMs(500);
-		led_off();
-		DelayMs(500);
+// 		led_on();
+// 		DelayMs(500);
+// 		led_off();
+// 		DelayMs(500);
+		
+		if(commandEnd)
+		{
+			commandEnd = 0;
+			
+			Uart1_Buffer[Uart1_BufferSize-1] = '\0';
+			if(0 == strcmp(Uart1_Buffer, command1))
+				led_on();
+			else if(!strcmp(Uart1_Buffer, command2))
+				led_off();
+			else
+				printf("unknow command \r\n");
+			
+			Uart1_BufferSize = 0;
+		}		
 	}
 }
 	

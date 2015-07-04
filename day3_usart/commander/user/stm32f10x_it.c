@@ -24,6 +24,8 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
 
+#include <stdio.h>
+
 #include "delay.h"
 
 /** @addtogroup STM32F10x_StdPeriph_Template
@@ -145,6 +147,32 @@ void SysTick_Handler(void)
 /*  available peripheral interrupt handler's name please refer to the startup */
 /*  file (startup_stm32f10x_xx.s).                                            */
 /******************************************************************************/
+extern char Uart1_Buffer[];
+extern uint8_t Uart1_BufferSize;
+extern uint8_t commandEnd;
+void USART1_IRQHandler()
+{
+	uint16_t tmpData;
+	if(USART_GetITStatus(USART1, USART_IT_RXNE) != RESET)
+	{
+		USART_ClearITPendingBit(USART1, USART_IT_RXNE);
+		
+		if(USART_ReceiveData(USART1) == '\r')
+		{
+			commandEnd = 1;
+			printf("\r\n");
+		}
+		if(USART_ReceiveData(USART1) == '\b')
+		{
+			printf("\b ");
+		}
+		
+		tmpData = USART_ReceiveData(USART1);
+		sprintf(&Uart1_Buffer[Uart1_BufferSize ++], "%c", tmpData);
+		Uart1_BufferSize &= 0xFF;
+		USART_SendData(USART1, tmpData);
+	}
+}
 
 /**
   * @brief  This function handles PPP interrupt request.

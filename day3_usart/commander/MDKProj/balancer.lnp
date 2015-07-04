@@ -1,5 +1,0 @@
---cpu Cortex-M3 ".\startup_stm32f10x_md.o" "delay.o" "bsp.o" "led.o" "misc.o" "stm32f10x_adc.o" "stm32f10x_crc.o" "stm32f10x_dma.o" "stm32f10x_exti.o" "stm32f10x_flash.o" "stm32f10x_gpio.o" "stm32f10x_i2c.o" "stm32f10x_rcc.o" "stm32f10x_rtc.o" "stm32f10x_tim.o" "stm32f10x_usart.o" "main.o" "stm32f10x_it.o" "core_cm3.o" "system_stm32f10x.o" 
---strict --scatter "balancer.sct" 
---summary_stderr --info summarysizes --map --xref --callgraph --symbols 
---info sizes --info totals --info unused --info veneers 
- --list ".\balancer.map" -o balancer.axf
