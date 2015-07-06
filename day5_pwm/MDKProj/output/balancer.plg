@@ -1,0 +1,23 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+Z:\Dropbox\balancer\day5_pwm\MDKProj\balancer.uvproj
+Project File Date:  07/06/2015
+
+<h2>Output:</h2>
+compiling motor.c...
+..\dirver\motor.c - 0 Error(s), 0 Warning(s).
+Build target 'balancer'
+linking...
+Program Size: Code=9612 RO-data=268 RW-data=824 ZI-data=1040  
+FromELF: creating hex file...
+".\output\balancer.axf" - 0 Error(s), 0 Warning(s).
+compiling main.c...
+..\user\main.c - 0 Error(s), 0 Warning(s).
+Build target 'balancer'
+linking...
+Program Size: Code=9608 RO-data=268 RW-data=824 ZI-data=1040  
+FromELF: creating hex file...
+".\output\balancer.axf" - 0 Error(s), 0 Warning(s).
