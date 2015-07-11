@@ -1,0 +1,40 @@
+*** Creating Trace Output File 'balancer.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\startup_stm32f10x_md.o"'
+### List of Objects: adding '"bsp.o"'
+### List of Objects: adding '"delay.o"'
+### List of Objects: adding '"uart1.o"'
+### List of Objects: adding '"core_cm3.o"'
+### List of Objects: adding '"system_stm32f10x.o"'
+### List of Objects: adding '"battery.o"'
+### List of Objects: adding '"consola.o"'
+### List of Objects: adding '"encoder.o"'
+### List of Objects: adding '"led.o"'
+### List of Objects: adding '"motor.o"'
+### List of Objects: adding '"inv_mpu.o"'
+### List of Objects: adding '"inv_mpu_dmp_motion_driver.o"'
+### List of Objects: adding '"stm32_i2c.o"'
+### List of Objects: adding '"misc.o"'
+### List of Objects: adding '"stm32f10x_adc.o"'
+### List of Objects: adding '"stm32f10x_gpio.o"'
+### List of Objects: adding '"stm32f10x_tim.o"'
+### List of Objects: adding '"stm32f10x_usart.o"'
+### List of Objects: adding '"stm32f10x_rcc.o"'
+### List of Objects: adding '"stm32f10x_it.o"'
+### List of Objects: adding '"main.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\startup_stm32f10x_md.o" "bsp.o" "delay.o" "uart1.o" "core_cm3.o" "system_stm32f10x.o" "battery.o" "consola.o" "encoder.o" "led.o" "motor.o" "inv_mpu.o" "inv_mpu_dmp_motion_driver.o" "stm32_i2c.o" "misc.o" "stm32f10x_adc.o" "stm32f10x_gpio.o" "stm32f10x_tim.o" "stm32f10x_usart.o" "stm32f10x_rcc.o" "stm32f10x_it.o" "main.o" --strict --scatter "balancer.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\balancer.map" -o "balancer.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'balancer.axf'
+### ADS-LD Command File: 'balancer.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'balancer.lnp', Handle=0x00000528
+### Writing '.lnp' file
+### ADS-LD Command file 'balancer.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 1 errors
+### Updating obj list
+### LDADS_file() completed.
